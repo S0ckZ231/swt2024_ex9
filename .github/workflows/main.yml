@@ -23,11 +23,11 @@ jobs:
       # Build the project using Maven
    - name: Run tests
      run: mvn test # Run unit tests using Maven
-deploy:
- needs: build
-  # Run deploy job only if the build job succeeds
- runs-on: ubuntu-latest
- steps:
-  - name: Deploy to Staging
-    run: echo "Deploying to staging environment..."
-     # Placeholder for actual deployment
+ deploy:
+  needs: build
+   # Run deploy job only if the build job succeeds
+  runs-on: ubuntu-latest
+  steps:
+   - name: Deploy to Staging
+     run: echo "Deploying to staging environment..."
+      # Placeholder for actual deployment
